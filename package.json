@@ -1,0 +1,9 @@
+{
+  "name": "nodenta",
+  "description": "simple app to control zfs from curl",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x"
+  }
+}
