@@ -54,7 +54,7 @@ app.post('/api/1/set', function(req, res){
   var filesystem = req.body.filesystem;
   var property = req.body.property;
   var value = req.body.value;
-  zfs.get({property: property }, function(err, list){ 
+  zfs.set({property: property, value: value, name: filesystem }, function(err, list){ 
   var prop;
   for (var i=0; i<list.length; i++) {
   if ( list[i].name == filesystem ) 
