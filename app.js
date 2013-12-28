@@ -61,6 +61,15 @@ app.post('/api/1/set', function(req, res){
     { prop = list[i] } } res.send(prop) } );
 });
 
+app.post('/api/1/create', function(req, res){
+  var filesystem = req.body.filesystem;
+  zfs.create({name: filesystem}, function(err, list){ res.send('Creating zfs filesystem')});
+});
+
+app.post('/api/1/destroy', function(req, res){
+  var filesystem = req.body.filesystem;
+  zfs.destroy({name: filesystem}, function(err, list){ res.send('Destroying zfs filesystem')});
+}); 
 
 app.listen(3000);
 console.log('Listening on port 3000');
