@@ -68,7 +68,9 @@ create
 
 Creates zfs filesystems
 
-    curl -d '{"filesystem": "picombinator/nibalizer/science"}' -H "Content-Type: application/json" http://127.0.0.1:3000/api/1/create
+    curl -d '{"filesystem": "picombinator/nibalizer/science"}' \
+    -H "Content-Type: application/json" \
+    http://127.0.0.1:3000/api/1/create
 
 
 Example response:
@@ -82,7 +84,9 @@ destroy
 
 Destroys zfs filesystems
 
-    curl -d '{"filesystem": "picombinator/nibalizer/test"}' -H "Content-Type: application/json" http://127.0.0.1:3000/api/1/destroy
+    curl -d '{"filesystem": "picombinator/nibalizer/test"}' \
+    -H "Content-Type: application/json" \
+    http://127.0.0.1:3000/api/1/destroy
 
 
 Example response:
@@ -97,7 +101,9 @@ get
 Gets a property from a filesystem
 
 
-    curl -d '{"filesystem": "picombinator/nibalizer/science", "property": "quota"}' -H "Content-Type: application/json" http://127.0.0.1:3000/api/1/get
+    curl -d '{"filesystem": "picombinator/nibalizer/science", \
+    "property": "quota"}' -H "Content-Type: application/json" \
+    http://127.0.0.1:3000/api/1/get
 
 
 Example response:
@@ -118,7 +124,10 @@ set
 Sets a property on a filesystem
 
 
-    curl -d '{"filesystem": "picombinator/nibalizer/science", "property": "quota", "value": "10737418240"}' -H "Content-Type: application/json" http://127.0.0.1:3000/api/1/set
+    curl -d '{"filesystem": "picombinator/nibalizer/science", \
+    "property": "quota", "value": "10737418240"}' -H \
+    "Content-Type: application/json" \
+    http://127.0.0.1:3000/api/1/set
 
     
 Example response
