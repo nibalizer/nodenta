@@ -22,22 +22,10 @@ app.get('/get/:property', function(req, res){
 app.get('/2/get/:property', function(req, res){
   var filesystem = req.headers['filesystem'];
   zfs.get({property: req.params.property }, function(err, list){ 
-
-//  var prop = list.map ( function (element) { if ( element.name == 'picombinator/nibalizer/science' ) { return element }} )
-
-
   var prop;
-
-
   for (var i=0; i<list.length; i++) {
-
-  if ( list[i].name == 'picombinator/nibalizer/science' ) 
-    { prop = list[i] }
-
-  } 
-
-
-  res.send(prop) } );
+  if ( list[i].name == filesystem ) 
+    { prop = list[i] } } res.send(prop) } );
 });
 
 
