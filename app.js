@@ -71,6 +71,10 @@ app.post('/api/1/destroy', function(req, res){
   zfs.destroy({name: filesystem}, function(err, list){ res.send('Destroying zfs filesystem')});
 }); 
 
+app.post('/api/1/list', function(req, res){
+  zfs.list(function(err, list){ res.send(list) } );
+});
+
 app.listen(3000);
 console.log('Listening on port 3000');
 
