@@ -20,7 +20,7 @@ Installation and use
     git clone https://github.com/nibalizer/nodenta.git
     cd nodenta
     npm install
-    node app.py
+    node app.js
 
 
 
