@@ -15,6 +15,10 @@ app.get('/list', function(req, res){
   zfs.list(function(err, list){ res.send(list) } );
 });
 
+app.get('/get/:property', function(req, res){
+  zfs.get({property: req.params.property }, function(err, list){ res.send(list) } );
+});
+
 
 app.listen(3000);
 console.log('Listening on port 3000');
