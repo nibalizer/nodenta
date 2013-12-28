@@ -99,7 +99,7 @@ set
 Sets a property on a filesystem
 
 
-    curl -d '{"filesystem": "picombinator/nibalizer/science", "property": "quota", "value": "10737418240"}' -H "Content-Type: application/json" http://chronoboost.cat.pdx.edu:3000/api/1/set
+    curl -d '{"filesystem": "picombinator/nibalizer/science", "property": "quota", "value": "10737418240"}' -H "Content-Type: application/json" http://127.0.0.1:3000/api/1/set
 
     
 Example response
