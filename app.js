@@ -40,7 +40,18 @@ app.get('/3/get', function(req, res){
     { prop = list[i] } } res.send(prop) } );
 });
 
+app.post('/api/1/get', function(req, res){
+  var filesystem = req.body.filesystem;
+  var property = req.body.property;
+  zfs.get({property: property }, function(err, list){ 
+  var prop;
+  for (var i=0; i<list.length; i++) {
+  if ( list[i].name == filesystem ) 
+    { prop = list[i] } } res.send(prop) } );
+});
 
 
 app.listen(3000);
 console.log('Listening on port 3000');
+
+
