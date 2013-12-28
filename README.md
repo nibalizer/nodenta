@@ -2,7 +2,26 @@ nodenta
 =======
 
 
-A node app to consume REST calls and effect ZFS/NFS changes on the host system.
+A node app to consume REST calls and make ZFS/NFS changes on the host system.
+
+
+
+
+System Requirements
+===================
+
+This has been developed on FreeBSD. In theory, any system with both zfs and node should work. Nodenta doesn't know how to ask for sudo permissions, and so must be run as root for now.
+
+
+
+Installation and use
+====================
+
+    git clone https://github.com/nibalizer/nodenta.git
+    cd nodenta
+    npm install
+    node app.py
+
 
 
 api endpoints
@@ -106,6 +125,28 @@ Example response
 
 
     No response
+
+
+
+
+Contributing
+============
+
+Please contribute! Right now things are simple but more advanced control should be possible.
+
+
+Copyright
+=========
+
+Copyright 2013 Spencer Krum
+
+
+
+License
+=======
+
+Apache 2
+
 
 
 
