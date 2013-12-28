@@ -3,6 +3,8 @@ var zfs = require('zfs');
 
 var app = express();
 
+app.use(express.bodyParser());
+
 app.get('/hello.txt', function(req, res){
   res.send('Hello World');
 });
