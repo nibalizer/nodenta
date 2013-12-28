@@ -63,13 +63,50 @@ destroy
 
 Destroys zfs filesystems
 
-    curl -d '{"filesystem": "picombinator/nibalizer/test"}' -H "Content-Type: application/json" http://chronoboost.cat.pdx.edu:3000/api/1/destroy
+    curl -d '{"filesystem": "picombinator/nibalizer/test"}' -H "Content-Type: application/json" http://127.0.0.1:3000/api/1/destroy
 
 
 Example response:
 
 
     Destroying zfs filesystem
+
+
+get
+---
+
+Gets a property from a filesystem
+
+
+    curl -d '{"filesystem": "picombinator/nibalizer/science", "property": "quota"}' -H "Content-Type: application/json" http://127.0.0.1:3000/api/1/get
+
+
+Example response:
+
+
+    {
+      "name": "picombinator/nibalizer/science",
+      "property": "quota",
+      "value": "10737418240",
+      "source": "local"
+    }
+
+
+
+set
+---
+
+Sets a property on a filesystem
+
+
+    curl -d '{"filesystem": "picombinator/nibalizer/science", "property": "quota", "value": "10737418240"}' -H "Content-Type: application/json" http://chronoboost.cat.pdx.edu:3000/api/1/set
+
+    
+Example response
+
+
+    No response
+
 
 
 
