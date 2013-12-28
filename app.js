@@ -1,4 +1,6 @@
 var express = require('express');
+var zfs = require('zfs');
+
 var app = express();
 
 app.get('/hello.txt', function(req, res){
